@@ -1,0 +1,29 @@
+[package]
+authors = ["thehuziek"]
+edition = "2018"
+readme = "README.md"
+name = "cerk-sdr"
+version = "0.1.0"
+
+[dependencies]
+cortex-m = "0.7.4"
+cortex-m-rt = "0.7.1"
+stm32h7xx-hal = { version = "0.14.0", features = ["stm32h743v", "rt"] }
+panic-halt = "0.2.0"
+display-interface = "0.4.1"
+display-interface-spi = "0.4.1"
+embedded-hal = "0.2.7"
+embedded-graphics-core = "0.4.0"
+embedded-graphics = "0.8.0"
+alloc-cortex-m = "0.4.0"
+
+
+[[bin]]
+name = "cerk-sdr"
+test = false
+bench = false
+
+[profile.release]
+codegen-units = 1 # better optimizations
+debug = true      # symbols are nice and they don't increase the size on Flash
+lto = true        # better optimizations
