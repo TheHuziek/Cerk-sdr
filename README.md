@@ -16,7 +16,7 @@ you need the cargo-binutils
 $ rustup component add llvm-tools-preview
 ```
 
-compile
+compile the firmware with cargo
 
 ```
 cargo build 
@@ -24,7 +24,7 @@ cargo objcopy --bin cerk-sdr --release -- -O binary cerk-sdr.bin
 
 ```
 
-load on your malaht
+load on your malahit
 
 ```
 sudo dfu-util -R -a 0 -s 0x8000000 -D cerk-sdr.bin
