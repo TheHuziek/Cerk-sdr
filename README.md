@@ -13,7 +13,8 @@ this is a project to make an open firmware for the malahit-sdr dsp1 device writt
 you need the cargo-binutils
 
 ```
-$ rustup component add llvm-tools-preview
+cargo install cargo-binutils
+rustup component add llvm-tools-preview
 ```
 
 compile the firmware with cargo
