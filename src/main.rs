@@ -1,7 +1,7 @@
 #![no_std]
 #![no_main]
 mod ili9488;
-
+mod msi001;
 use embedded_graphics_core::{prelude::{DrawTarget, RgbColor}, pixelcolor::Rgb565};
 // use embedded_graphics_core::prelude::RgbColor;
 use ili9488::Ili9488;
